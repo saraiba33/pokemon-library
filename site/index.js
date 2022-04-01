@@ -6,6 +6,15 @@ const getPokemon = () => {
         })
         .then((data) => {
             console.log(data);
+            const pokemon = {
+                name: data.name,
+                id: data.id,
+                image: data.sprites['front_shiny'],
+                type: data.types.map(type => type.type.name).join()
+            };
+
+
+            console.log(pokemon)
         });
 
 };
