@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 body {
     font-family: 'Titillium Web', sans-serif;
-    background-image: url('images/pokeball1.jpg');
+    background-image: url('images/poke-card.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin-bottom: 60px;
+    background-size: cover;
 }
 
 .card {
@@ -14,13 +14,13 @@ body {
     border-radius: 10px;
     text-align: center;
     display: grid;
-    grid-template-columns: 200px, 1fr;
-    grid-template-rows: 2fr, 1fr, 1fr, 1fr;
+    grid-template-columns: 220px, 1fr;
+    grid-template-rows: 3fr, 10px, 50px, 10px;
 }
 
 .pokedex {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 3fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 3fr));
     grid-template-rows: repeat(13, 400px);
     grid-gap: 20px;
 }
@@ -30,21 +30,24 @@ body {
     font-size: 24px;
     font-weight: 600;
     margin: 10px 0;
-    align-content: center;
+    align-self: center;
 }
 
 .card-subtitle {
-    background-color: hsl(25, 98%, 57%);
-    padding: 10px;
-    padding-right: 0;
-    margin: 10px 0;
+    background-color: hsl(8, 95%, 60%);
+    color: white;
     border-radius: 5px;
+    width: 100%;
+    align-self: center;
+    justify-self: left;
+    margin-left: 0;
+    padding: 10px 0;
 }
 
 .card-number {
     text-align: left;
-    margin-bottom: 20px;
     color: gray;
+    font-size: 14px;
 }
 
 h2 {
@@ -55,23 +58,49 @@ h2 {
 }
 
 .card-image {
-    width: 140px;
+    width: 100%;
     background-color: hsl(0, 0%, 95%);
-    display: grid;
-    grid-template-columns: 200px, 1fr;
-}
-
-header img {
-    width: 200px;
+    justify-self: center;
+    border-radius: 10px;
 }
 
 header {
     background-color: white;
     width: 100%;
     display: flex;
+    align-content: center;
     justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.header-image {
+    width: 200px;
+    margin: 10px 100px;
+    display: flex;
+}
+
+h1 {
+    margin-right: 100px;
+    display: flex;
+    justify-self: right;
+}
+
+h1 a {
+    align-self: center;
+    justify-self: end;
+    background-color: hsl(8, 95%, 60%);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 main {
     margin: 40px 100px;
+}
+
+.spinner {
+    width: 500px;
+}
+
+.hidden {
+    display: none;
 }
