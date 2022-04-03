@@ -25,7 +25,7 @@ const displayPokemon = (pokemon) => {
     <li class="card">
         <img class="card-image" src="${pokeman.image}" alt="poke card"/>
         <p class="card-number">#0${pokeman.id}</p>
-        <h2 class="card-title">${pokeman.name}</h2>
+        <h3 class="card-title">${pokeman.name}</h3>
         <p class="card-subtitle">Type: ${pokeman.type}</p>
     </li>
     `)
@@ -34,3 +34,15 @@ const displayPokemon = (pokemon) => {
 };
 
 fetchPokemon();
+
+
+
+const img = document.createElement("img");
+img.src = "https://user-images.githubusercontent.com/33485290/43087793-f370302a-8ea0-11e8-8dcb-e35b1b33c9a2.png"
+const header = document.querySelector("header");
+header.append(img);
+img.classList.add("header-image");
+
+
+// const main = document.querySelector("main")
+// main.classList.add("content-wrapper")

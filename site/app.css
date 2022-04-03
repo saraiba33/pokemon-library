@@ -1,25 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 body {
     font-family: 'Titillium Web', sans-serif;
-    background-image: url('images/background1.jpg');
+    background-image: url('images/pokeball1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-bottom: 60px;
 }
 
 .card {
     list-style: none;
-    background-color: hsl(0, 0%, 95%);
-    padding: 40px;
+    background-color: white;
+    padding: 20px 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 200px, 1fr;
+    grid-template-rows: 2fr, 1fr, 1fr, 1fr;
 }
 
 .pokedex {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 3fr));
+    grid-template-rows: repeat(13, 400px);
     grid-gap: 20px;
 }
 
 .card-title {
     text-transform: uppercase;
     font-size: 24px;
-    font-weight: 575;
+    font-weight: 600;
+    margin: 10px 0;
+    align-content: center;
 }
 
 .card-subtitle {
@@ -27,5 +38,40 @@ body {
     padding: 10px;
     padding-right: 0;
     margin: 10px 0;
-    margin-right: 100px;
+    border-radius: 5px;
+}
+
+.card-number {
+    text-align: left;
+    margin-bottom: 20px;
+    color: gray;
+}
+
+h2 {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.card-image {
+    width: 140px;
+    background-color: hsl(0, 0%, 95%);
+    display: grid;
+    grid-template-columns: 200px, 1fr;
+}
+
+header img {
+    width: 200px;
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    margin: 40px 100px;
 }
