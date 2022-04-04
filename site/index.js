@@ -21,7 +21,6 @@ const getPokemon = () => {
 };
 
 const displayPokemon = (allPokemon) => {
-    console.log(allPokemon);
     const pokemonHTMLString = allPokemon.map(pokemon => `
     <li class="card">
         <a href="pokemon.html?pokemon=${pokemon.name}">
@@ -31,10 +30,8 @@ const displayPokemon = (allPokemon) => {
         <h3 class="card-title">${pokemon.name}</h3>
         <p class="card-subtitle">${pokemon.type}</p>
     </li>
-    `)
-        .join('')
+    `).join('')
     spinner.classList.add("hidden")
-    console.log(allPokemon)
     pokedex.innerHTML = pokemonHTMLString
 };
 

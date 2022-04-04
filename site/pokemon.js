@@ -6,17 +6,24 @@ function getPokemon(pokemon) {
     const div = document.createElement("div")
     const pokemonContent = `
         <h3 class="poke-name">${pokemon.name} #0${pokemon.id}</h3>
-        <p class="poke-number">#0${pokemon.id}</p>
         <img class="poke-image" src="${pokemon.sprites.front_default}" alt="${pokemon.name}" />
-        <p class="type">Type: ${pokemon.types.map((type) => type.type.name).join(', ')}</p>
-        <p classs="ability">Abilities: ${pokemon.abilities.map((ability) => ability.ability.name).join(', ')}</p>        
+        <p class="ability-title" >Abilities</p>
+        <p class="type-title" >Type</p>
+        <ul class="type-group">
+            <li classs="type1">${pokemon.types.map((type) => type.type.name).slice(0, 1)}</li>
+            <li classs="type2">${pokemon.types.map((type) => type.type.name).slice(1, 2)}</li>
+        </ul>
+        <ul class="ability-group">
+            <li classs="ability-name1">${pokemon.abilities.map((ability) => ability.ability.name).slice(0, 1)}</li>
+            <li classs="ability-name2">${pokemon.abilities.map((ability) => ability.ability.name).slice(1, 2)}</li> 
+        </ul>
+        
+
+        
         `
     div.innerHTML = pokemonContent
     main.append(div)
-    div.classList.add("each-pokemon")
-
-    console.log(pokemon)
-
+    div.classList.add("pokemon-details")
 }
 
 const url = new URL(window.location)
