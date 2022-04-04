@@ -1,106 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
-body {
-    font-family: 'Titillium Web', sans-serif;
-    background-image: url('images/poke-card.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-.card {
-    list-style: none;
-    background-color: white;
-    padding: 20px 20px;
-    border-radius: 10px;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 220px, 1fr;
-    grid-template-rows: 3fr, 10px, 50px, 10px;
-}
-
-.pokedex {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 3fr));
-    grid-template-rows: repeat(13, 400px);
-    grid-gap: 20px;
-}
-
-.card-title {
-    text-transform: uppercase;
-    font-size: 24px;
-    font-weight: 600;
-    margin: 10px 0;
-    align-self: center;
-}
-
-.card-subtitle {
-    background-color: hsl(8, 95%, 60%);
-    color: white;
-    border-radius: 5px;
-    width: 100%;
-    align-self: center;
-    justify-self: left;
-    margin-left: 0;
-    padding: 10px 0;
-}
-
-.card-number {
-    text-align: left;
-    color: gray;
-    font-size: 14px;
-}
-
-h2 {
-    font-size: 50px;
-    color: white;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.card-image {
-    width: 100%;
-    background-color: hsl(0, 0%, 95%);
-    justify-self: center;
-    border-radius: 10px;
-}
-
-header {
-    background-color: white;
-    width: 100%;
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-}
-
-.header-image {
-    width: 200px;
-    margin: 10px 100px;
-    display: flex;
-}
-
-h1 {
-    margin-right: 100px;
-    display: flex;
-    justify-self: right;
-}
-
-h1 a {
-    align-self: center;
-    justify-self: end;
-    background-color: hsl(8, 95%, 60%);
-    padding: 10px;
-    border-radius: 5px;
-}
-
-main {
-    margin: 40px 100px;
-}
-
-.spinner {
-    width: 500px;
-}
-
-.hidden {
-    display: none;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+    body {
+        font-family: 'Titillium Web', sans-serif;
+        background-image: url('images/poke-card.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    
+    .card {
+        list-style: none;
+        background-color: white;
+        padding: 20px 20px;
+        border-radius: 10px;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 220px, 1fr;
+        grid-template-rows: 3fr, 10px, 50px, 10px;
+    }
+    
+    .pokedex {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 3fr));
+        grid-template-rows: repeat(13, 400px);
+        grid-gap: 20px;
+    }
+    
+    .card-title {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 10px 0;
+        align-self: center;
+    }
+    
+    .card-subtitle {
+        background-color: hsl(8, 95%, 60%);
+        color: white;
+        border-radius: 5px;
+        width: 100%;
+        align-self: center;
+        justify-self: left;
+        margin-left: 0;
+        padding: 10px 0;
+    }
+    
+    .card-number {
+        text-align: left;
+        color: gray;
+        font-size: 14px;
+    }
+    
+    h2 {
+        font-size: 50px;
+        color: white;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .card-image {
+        width: 100%;
+        background-color: hsl(0, 0%, 95%);
+        justify-self: center;
+        border-radius: 10px;
+    }
+    
+    header {
+        background-color: white;
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        border-bottom: 8px solid hsl(218, 48%, 40%);
+    }
+    
+    .header-image {
+        width: 200px;
+        margin: 10px 100px;
+        display: flex;
+    }
+    
+    h1 {
+        margin-right: 100px;
+        display: flex;
+        justify-self: right;
+    }
+    
+    h1 a {
+        align-self: center;
+        justify-self: end;
+        background-color: hsl(8, 95%, 60%);
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 20px;
+    }
+    
+    h1 a:hover {
+        background-color: hsl(8, 95%, 75%);
+    }
+    
+    main {
+        margin: 40px 100px;
+    }
+    
+    .spinner {
+        width: 500px;
+    }
+    
+    .hidden {
+        display: none;
+    }

@@ -1,7 +1,7 @@
 const pokedex = document.querySelector(".pokedex")
 const spinner = document.querySelector(".spinner")
 
-const fetchPokemon = () => {
+const getPokemon = () => {
     const promises = [];
     for (let i = 1; i <= 50; i++) {
         const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
@@ -9,27 +9,27 @@ const fetchPokemon = () => {
     }
 
     Promise.all(promises).then((results) => {
-        const pokemon = results.map((data) => ({
+        const allPokemon = results.map((data) => ({
             name: data.name,
             id: data.id,
             image: data.sprites['front_default'],
             type: data.types.map((type) => type.type.name).join(', '),
             abilities: data.abilities.map((ability) => ability.ability.name).join(', ')
         }));
-        displayPokemon(pokemon);
+        displayPokemon(allPokemon);
     });
 };
 
-const displayPokemon = (pokemon) => {
-    console.log(pokemon);
-    const pokemonHTMLString = pokemon.map(pokeman => `
+const displayPokemon = (allPokemon) => {
+    console.log(allPokemon);
+    const pokemonHTMLString = allPokemon.map(pokemon => `
     <li class="card">
-        <a href="pokemon.html?pokemon=${pokeman.name}">
-        <img class="card-image" src="${pokeman.image}" alt="${pokeman.name}"/>
+        <a href="pokemon.html?pokemon=${pokemon.name}">
+        <img class="card-image" src="${pokemon.image}" alt="${pokemon.name}"/>
         </a>
-        <p class="card-number">#0${pokeman.id}</p>
-        <h3 class="card-title">${pokeman.name}</h3>
-        <p class="card-subtitle">${pokeman.type}</p>
+        <p class="card-number">#0${pokemon.id}</p>
+        <h3 class="card-title">${pokemon.name}</h3>
+        <p class="card-subtitle">${pokemon.type}</p>
     </li>
     `)
         .join('')
@@ -45,7 +45,7 @@ img.classList.add("header-image");
 
 
 
-fetchPokemon();
+getPokemon();
 
 
 
