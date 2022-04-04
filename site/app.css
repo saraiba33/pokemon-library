@@ -130,3 +130,40 @@
     .hidden {
         display: none;
     }
+    /*pokeman page layout*/
+    
+    .each-pokemon {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        column-gap: 30px;
+    }
+    
+    .poke-number {}
+    
+    .poke-image {
+        width: 200px;
+        background-color: hsl(0, 0%, 95%);
+        margin: 20px 50px;
+        border-radius: 10px;
+    }
+    
+    .type {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-content: center;
+        column-gap: 30px;
+        font-size: 25px;
+    }
+    
+    .ability {
+        justify-self: right;
+        font-size: 15px;
+        align-self: center;
+    }
+    
+    .poke-name {
+        text-transform: uppercase;
+        margin-left: 50px;
+    }

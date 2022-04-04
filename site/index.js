@@ -34,6 +34,7 @@ const displayPokemon = (allPokemon) => {
     `)
         .join('')
     spinner.classList.add("hidden")
+    console.log(allPokemon)
     pokedex.innerHTML = pokemonHTMLString
 };
 
@@ -46,11 +47,3 @@ img.classList.add("header-image");
 
 
 getPokemon();
-
-
-
-
-
-
-// const main = document.querySelector("main")
-// main.classList.add("content-wrapper")
