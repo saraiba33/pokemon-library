@@ -273,11 +273,6 @@
     .type-group li+li {
         margin-top: 25px;
     }
-    /* @media (max-width: 1500px) {
-        .type-group li+li {
-            margin-top: 0;
-        }
-    } */
     
     .ability-title {
         grid-column: 2 / span 1;
@@ -333,12 +328,6 @@
     .ability-group li+li {
         margin-top: 25px;
     }
-    /* @media (max-width: 1500px) {
-        .ability-group li+li {
-            margin-top: 0;
-            margin-left: 50px;
-        }
-    } */
     
     .filler-image {
         grid-column: 3/ span 1;
