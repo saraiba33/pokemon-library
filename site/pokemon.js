@@ -16,10 +16,8 @@ function getPokemon(pokemon) {
         <ul class="ability-group">
             <li classs="ability-name1">${pokemon.abilities.map((ability) => ability.ability.name).slice(0, 1)}</li>
             <li classs="ability-name2">${pokemon.abilities.map((ability) => ability.ability.name).slice(1, 2)}</li> 
-        </ul>
-        
-
-        
+        </ul> 
+        <img class="filler-image" src="images/logo-pokedex.png" />
         `
     div.innerHTML = pokemonContent
     main.append(div)
