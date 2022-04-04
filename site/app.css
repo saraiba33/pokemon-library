@@ -14,8 +14,25 @@
         border-radius: 10px;
         text-align: center;
         display: grid;
-        grid-template-columns: 220px, 1fr;
-        grid-template-rows: 3fr, 10px, 50px, 10px;
+    }
+    
+    .card:hover {
+        animation: bounce 1s linear;
+    }
+    
+    @keyframes bounce {
+        20% {
+            transform: translateY(-6px)
+        }
+        40% {
+            transform: translateY(0px)
+        }
+        60% {
+            transform: translateY(-2px)
+        }
+        80% {
+            transform: translateY(-0px)
+        }
     }
     
     .pokedex {
